@@ -1,12 +1,12 @@
 from sqlalchemy import Column, Integer, Float, String, create_engine
 from sqlalchemy.orm import declarative_base, sessionmaker, relationship
 from dataclasses import dataclass
+from Feature_main import lanche
 
 BD = create_engine("sqlite:///bancodedadosvendas.bd")
 
 Session = sessionmaker(bind=BD)
 session = Session()
-
 Base = declarative_base()
 
 @dataclass
